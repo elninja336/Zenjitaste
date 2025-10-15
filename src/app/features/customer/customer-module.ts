@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TouristRoutingModule } from './tourist-routing-module';
-import { TouristLayout } from './tourist-layout/tourist-layout';
+import { CustomerRoutingModule } from './customer-routing-module';
+import { CustomerLayout } from './customer-layout/customer-layout';
 import { Home } from './home/home';
 import { HeroSection } from './home/components/hero-section/hero-section';
 import { FeaturedExperiences } from './home/components/featured-experiences/featured-experiences';
@@ -16,7 +16,7 @@ import { Faq } from './faq/faq';
 
 @NgModule({
   declarations: [
-    TouristLayout,
+    CustomerLayout,
     Home,
     HeroSection,
     FeaturedExperiences,
@@ -29,7 +29,7 @@ import { Faq } from './faq/faq';
   ],
   imports: [
     CommonModule,
-    TouristRoutingModule
+    CustomerRoutingModule
   ]
 })
-export class TouristModule { }
+export class CustomerModule  { }

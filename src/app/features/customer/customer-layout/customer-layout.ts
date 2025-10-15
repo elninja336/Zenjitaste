@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-tourist-layout',
   standalone: false,
-  templateUrl: './tourist-layout.html',
-  styleUrl: './tourist-layout.css'
+  templateUrl: './customer-layout.html',
+  styleUrl: './customer-layout.css'
 })
-export class TouristLayout {
+export class CustomerLayout {
 
 }

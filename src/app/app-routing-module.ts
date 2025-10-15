@@ -6,7 +6,7 @@ const routes: Routes = [
   // Tourist routes (public)
   {
     path: '',
-    loadChildren: () => import('./features/tourist/tourist-module').then(m => m.TouristModule)
+    loadChildren: () => import('./features/customer/customer-module').then(m => m.CustomerModule)
   },
   
   // Provider routes (requires authentication)
