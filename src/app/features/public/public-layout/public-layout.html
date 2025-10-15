@@ -1,1 +1,74 @@
-<p>public-layout works!</p>
+<!-- Navigation -->
+<nav [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <div class="logo">
+      <i class="fas fa-utensils"></i>
+      ZenjiTaste
+    </div>
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <!-- <a [routerLink]="['/home']" fragment="experiences">Experiences</a> -->
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <div class="language-selector">
+        <button class="lang-btn" [class.active]="activeLang === 'EN'" (click)="setLanguage('EN')">EN</button>
+        <button class="lang-btn" [class.active]="activeLang === 'SW'" (click)="setLanguage('SW')">SW</button>
+        <button class="lang-btn" [class.active]="activeLang === 'AR'" (click)="setLanguage('AR')">AR</button>
+      </div>
+      <a href="#" class="btn-primary">Sign In</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Router Outlet for child components -->
+<!-- <router-outlet></router-outlet> -->
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>ZenjiTaste</h3>
+      <p>Connecting tourists with authentic Zanzibari food and culture</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>For Tourists</h3>
+      <ul>
+        <li><a href="#">Browse Experiences</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Safety Guidelines</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>For Providers</h3>
+      <ul>
+        <li><a href="#">Become a Provider</a></li>
+        <li><a href="#">Provider Dashboard</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Success Stories</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 ZenjiTaste. All rights reserved. Made with ❤️ in Zanzibar</p>
+  </div>
+</footer>

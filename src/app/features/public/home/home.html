@@ -1,1 +1,109 @@
-<p>home works!</p>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <i class="fas fa-pepper-hot floating-icon icon-1"></i>
+  <i class="fas fa-fish floating-icon icon-2"></i>
+  <i class="fas fa-leaf floating-icon icon-3"></i>
+
+  <div class="hero-content">
+    <h1>Discover Authentic Zanzibari Cuisine</h1>
+    <p>Connect with local families and restaurants for unforgettable cultural food experiences</p>
+    <div class="hero-buttons">
+      <button class="btn-primary btn-large" (click)="scrollToExperiences()">Explore Experiences</button>
+      <button class="btn-primary btn-outline btn-large">Become a Provider</button>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <h2 class="section-title">Why Choose ZenjiTaste?</h2>
+  <p class="section-subtitle">Experience Zanzibar's rich culinary heritage like never before</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-home"></i>
+      </div>
+      <h3>Authentic Experiences</h3>
+      <p>Dine with local families and experience genuine Zanzibari hospitality in traditional settings</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-globe"></i>
+      </div>
+      <h3>Multi-Language Support</h3>
+      <p>Browse and book in English, Swahili, Arabic, French, German, and Italian</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <h3>Cultural Stories</h3>
+      <p>Learn the history and traditions behind each dish from passionate local providers</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Secure Booking</h3>
+      <p>Safe and secure payment options including M-Pesa, PayPal, and major credit cards</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <h3>Verified Reviews</h3>
+      <p>Read authentic reviews from travelers who've experienced these culinary journeys</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">
+        <i class="fas fa-map-marked-alt"></i>
+      </div>
+      <h3>Easy Discovery</h3>
+      <p>Find experiences near you with interactive maps and smart search filters</p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Experiences -->
+<section class="experiences" id="experiences">
+  <h2 class="section-title">Featured Experiences</h2>
+  <p class="section-subtitle">Handpicked culinary adventures waiting for you</p>
+
+  <div class="experiences-grid">
+    <div class="experience-card" *ngFor="let exp of experiences">
+      <div class="experience-image">
+        <span class="experience-badge">{{ exp.badge }}</span>
+      </div>
+      <div class="experience-content">
+        <h3 class="experience-title">{{ exp.title }}</h3>
+        <div class="experience-location">
+          <i class="fas fa-map-marker-alt"></i>
+          {{ exp.location }}
+        </div>
+        <p class="experience-description">
+          {{ exp.description }}
+        </p>
+        <div class="experience-footer">
+          <span class="experience-price">${{ exp.price }} <small>/ person</small></span>
+          <div class="experience-rating">
+            <i class="fas fa-star"></i>
+            <span>{{ exp.rating }} ({{ exp.reviews }})</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <h2>Ready to Taste Zanzibar?</h2>
+  <p>Join thousands of travelers discovering authentic culinary experiences</p>
+  <button class="btn-primary btn-large">Start Your Journey</button>
+</section>
